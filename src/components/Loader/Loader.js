@@ -9,11 +9,11 @@ export const Loader = () => {
       {isLoading && (
         <ThreeCircles
           visible={true}
-          height="100"
-          width="100"
-          color="#4fa94d"
+          height="200"
+          width="200"
+          color="rgb(27, 1, 49)"
           ariaLabel="three-circles-loading"
-          wrapperStyle={{ margin: '0 auto' }}
+          wrapperStyle={{ margin: '200px 49% 200px 49%' }}
         />
       )}
     </>

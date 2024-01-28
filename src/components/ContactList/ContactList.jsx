@@ -1,20 +1,21 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import css from './ContactList.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts, deleteContact } from '../../redux/thunks';
+import { deleteContact } from '../../redux/thunks';
 import { selector } from '../../redux/selectors';
 import { GoPerson } from 'react-icons/go';
 
 const ContactList = () => {
+  const dispatch = useDispatch();
   const selectorContacts = useSelector(selector);
 
-  const dispatch = useDispatch();
   const question = () => {
     return prompt(
       'Are you sure you want to delete the contact? If not, click cancel.',
       'Ok'
     );
   };
+
   const onDelete = id => {
     if (question()) {
       dispatch(deleteContact(id));
@@ -29,7 +30,6 @@ const ContactList = () => {
           <GoPerson />
           <span className={css.itemName}>{name}:</span>
           <span className={css.itemNumber}>{number}</span>
-
           <button
             className={css.btn}
             type="button"
@@ -41,10 +41,6 @@ const ContactList = () => {
       </>
     );
   });
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
 
   return <ul className={css.list}>{newContact}</ul>;
 };

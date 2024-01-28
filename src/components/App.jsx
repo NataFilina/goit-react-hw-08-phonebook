@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectorIsAuth, selectorProfile } from '../redux/selectors';
+import { useDispatch } from 'react-redux';
 import { Suspense, useEffect } from 'react';
 import { refreshThunk } from '../redux/thunks';
 import PrivateRoute from '../guards/PrivateRoute';
@@ -16,17 +15,14 @@ const LoginPage = lazy(() => import('../pages/LoginPage'));
 const ContactsPage = lazy(() => import('../pages/ContactsPage'));
 
 export const App = () => {
-  const token = useSelector(selectorIsAuth);
-  const prof = useSelector(selectorProfile);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    !prof && token && dispatch(refreshThunk());
-  }, [prof, token, dispatch]);
+    dispatch(refreshThunk());
+  }, [dispatch]);
 
   return (
     <>
-      <Loader />
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<SharedLayout />}>

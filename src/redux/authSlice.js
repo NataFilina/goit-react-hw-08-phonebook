@@ -10,6 +10,7 @@ import { handleFulfilled } from './hendlers';
 const initialState = {
   token: '',
   profile: null,
+  isRefreshing: false,
 };
 
 const authSlice = createSlice({
@@ -28,12 +29,13 @@ const authSlice = createSlice({
       .addCase(refreshThunk.fulfilled, (state, { payload }) => {
         state.profile = payload;
       })
-      .addCase(refreshThunk.rejected, (state, { payload }) => {
-        state.profile = payload;
+      .addCase(refreshThunk.rejected, state => {
+        state.profile = '';
       })
       .addCase(logoutThunk.fulfilled, state => {
         state.token = '';
         state.profile = null;
+        state.isRefreshing = false;
       })
       .addMatcher(
         action => action.type.endsWith('/fulfilled'),
