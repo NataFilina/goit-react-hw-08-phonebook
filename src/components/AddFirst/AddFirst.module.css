@@ -1,0 +1,11 @@
+.title {
+  display: block;
+  color: rgb(27, 1, 49);
+  box-shadow: 1px 7px 5px rgba(18, 2, 31, 0.6);
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+}

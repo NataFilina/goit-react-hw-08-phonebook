@@ -12,15 +12,18 @@ const Filter = () => {
     dispatch(filterAction(event.target.value));
   };
   return (
-    <label className={css.label}>
-      Find contacts by name
-      <input
-        className={css.input}
-        type="text"
-        value={filter}
-        onChange={changeFilter}
-      />
-    </label>
+    <div className={css.filter}>
+      <h2 className={css.title}>Contacts</h2>
+      <label className={css.label}>
+        Find contacts by name
+        <input
+          className={css.input}
+          type="text"
+          value={filter}
+          onChange={changeFilter}
+        />
+      </label>
+    </div>
   );
 };
 

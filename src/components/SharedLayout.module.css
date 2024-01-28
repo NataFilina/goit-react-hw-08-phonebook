@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  padding: 10px;
+  box-shadow: 1px 7px 5px rgba(18, 2, 31, 0.6);
+  margin-bottom: 15px;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255),
+    rgba(72, 11, 121, 0.425)
+  );
+}
+.btns {
+  display: flex;
+  gap: 8px;
+  text-decoration: none;
+  align-items: center;
+  color: rgb(27, 1, 49);
+}

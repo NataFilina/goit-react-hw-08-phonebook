@@ -6,7 +6,7 @@ import { selectorItems } from '../../redux/selectors';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setNumber] = useState('');
   const items = useSelector(selectorItems);
   const dispatch = useDispatch();
 
@@ -15,9 +15,9 @@ export const ContactForm = () => {
 
     items?.find(contact => contact.name.toLowerCase() === name.toLowerCase())
       ? alert(name + ' is already in contacts')
-      : dispatch(addContact({ name, phone }));
+      : dispatch(addContact({ name, number }));
     setName('');
-    setPhone('');
+    setNumber('');
   };
 
   const handleChange = event => {
@@ -25,8 +25,8 @@ export const ContactForm = () => {
       case 'name':
         setName(event.currentTarget.value);
         break;
-      case 'phone':
-        setPhone(event.currentTarget.value);
+      case 'number':
+        setNumber(event.currentTarget.value);
         break;
       default:
         return;
@@ -35,6 +35,7 @@ export const ContactForm = () => {
 
   return (
     <>
+      <h1 className={css.mainTitle}>Phone book</h1>
       <form className={css.form} onSubmit={handlerFormSubmits}>
         <label className={css.label}>
           Name
@@ -52,9 +53,9 @@ export const ContactForm = () => {
           <input
             className={css.input}
             type="tel"
-            name="phone"
+            name="number"
             required
-            value={phone}
+            value={number}
             onChange={handleChange}
           ></input>
         </label>

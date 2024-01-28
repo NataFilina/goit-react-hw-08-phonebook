@@ -1,0 +1,18 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  font-size: 18px;
+}
+.text {
+  color: rgb(27, 1, 49);
+}
+.btn {
+  color: rgb(27, 1, 49);
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 3px 3px rgba(18, 2, 31, 0.6);
+  padding: 7px;
+}

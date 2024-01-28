@@ -1,13 +1,38 @@
 .list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-left: 15px;
+  gap: 10px;
+  margin-bottom: 15px;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto;
 }
 .item {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: 10px;
+  color: rgb(27, 1, 49);
   margin-top: 15px;
 }
 .itemName {
   font-weight: 500;
+  color: rgb(27, 1, 49);
+}
+.itemNumber {
+  color: rgb(27, 1, 49);
+}
+.btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgb(27, 1, 49);
+  box-shadow: 1px 7px 5px rgba(18, 2, 31, 0.6);
+  border: none;
 }

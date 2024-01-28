@@ -1,10 +1,25 @@
-.mainTitle {
-  color: rgb(32, 25, 25);
-  text-align: center;
-  font-weight: 600;
-  font-size: 28px;
-  font-style: italic;
+.btnHome {
+  display: block;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: transparent;
   color: rgb(27, 1, 49);
+  box-shadow: 1px 5px 5px rgba(18, 2, 31, 0.6);
+  border: none;
+}
+.login {
+  display: block;
+  width: 55px;
+  text-decoration: none;
+  color: rgb(27, 1, 49);
+  box-shadow: 1px 7px 5px rgba(18, 2, 31, 0.6);
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  font-size: 14px;
 }
 .form {
   display: flex;
@@ -25,7 +40,7 @@
   width: 300px;
   height: 30px;
   border-radius: 5px;
-  box-shadow: 1px 7px 5px rgba(18, 2, 31, 0.6);
+  box-shadow: 1px 5px 5px rgba(18, 2, 31, 0.6);
   border: none;
   color: rgb(27, 1, 49);
 }
@@ -41,6 +56,7 @@
   border-radius: 5px;
   background-color: transparent;
   color: rgb(27, 1, 49);
-  box-shadow: 1px 7px 5px rgba(18, 2, 31, 0.6);
+  box-shadow: 1px 5px 5px rgba(18, 2, 31, 0.6);
   border: none;
+  margin: 5px 0;
 }
